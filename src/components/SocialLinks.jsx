@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Facebook, ExternalLink } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const SocialLinks = () => {
   const socialLinks = [
@@ -42,20 +42,6 @@ const SocialLinks = () => {
 
   return (
     <div className="space-y-4">
-      {/* Kickstarter CTA */}
-      <a
-        href="https://www.kickstarter.com/projects/timpilabs/ryza-ios-native-fitness-app-with-limitless-features?ref=user_menu"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="group block w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-3 px-6 rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-200 shadow-md"
-      >
-        <div className="flex items-center justify-center gap-2">
-          <span className="text-sm">Back us on Kickstarter</span>
-          <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </div>
-      </a>
-
-      {/* Social Media Icons */}
       <div>
         <p className="text-center text-gray-600 mb-3 text-xs">Follow our journey</p>
         <div className="flex justify-center items-center gap-4">
