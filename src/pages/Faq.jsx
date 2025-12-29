@@ -92,10 +92,12 @@ function Faq() {
             </div>
           ) : (
             <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {filteredCategories.map((category) => (
-                <Link
-                  key={category.slug}
-                  to={`/faq/${category.slug}`}
+              {filteredCategories.map((category) => {
+                const categoryLink = category.slug === 'legal' ? '/legal' : `/faq/${category.slug}`;
+                return (
+                  <Link
+                    key={category.slug}
+                    to={categoryLink}
                   className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500"
                 >
                   <div className="space-y-1">
@@ -107,8 +109,9 @@ function Faq() {
                   <div className="mt-6 text-sm font-semibold text-blue-600">
                     {category.articles.length} {category.articles.length === 1 ? 'article' : 'articles'}
                   </div>
-                </Link>
-              ))}
+                  </Link>
+                );
+              })}
             </div>
           )}
         </section>

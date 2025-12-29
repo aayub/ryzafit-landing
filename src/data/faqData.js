@@ -1,3 +1,5 @@
+import { legalDocuments } from './legalDocuments';
+
 export const faqCategories = [
   {
     slug: 'getting-started',
@@ -403,52 +405,25 @@ export const faqCategories = [
     heroImage: '/app-mockup.png',
     articles: [
       {
-        question: 'Terms of Service',
-        intro: 'Please read these Terms and Conditions carefully before using any of our services. Key excerpts are summarized below.',
-        sections: [
-          {
-            heading: 'Fitness & Health Disclaimer',
-            paragraphs: [
-              'RyzaFit is designed to help you log workouts, track fitness activity, and view training information for general educational purposes.',
-              'RyzaFit does not provide medical advice, diagnosis, or treatment. Workouts, routines, analytics, and recommendations are not a substitute for professional medical guidance.',
-              'Consult a qualified healthcare professional before beginning any exercise program—especially if you have medical conditions, injuries, or health concerns.'
-            ],
-            bullets: [
-              'You are solely responsible for your health, safety, and physical condition while using the app.',
-              'Any exercise you perform is done at your own risk.',
-              'RyzaFit, its creators, and affiliates are not liable for injuries, health issues, or damages resulting from use or misuse of the app.'
-            ],
-            outro: 'If you experience pain, discomfort, dizziness, or concerning symptoms while exercising, stop immediately and seek medical advice.'
-          },
-          {
-            heading: 'Subscriptions & Billing',
-            paragraphs: [
-              'RyzaFit offers optional paid subscriptions (RyzaFit Pro) for additional features.',
-              'Subscription plans can be monthly or yearly. Pricing and availability are shown in-app and may vary by region.',
-              'All payments are processed securely through your Apple App Store account; RyzaFit never stores payment information.',
-              'Payment is charged to your Apple ID at purchase. Subscriptions renew automatically unless canceled at least 24 hours before the current period ends, with renewal charges occurring within 24 hours of expiration.'
-            ],
-            bullets: ['Manage or cancel anytime via iOS Settings → Apple ID → Subscriptions.', 'Deleting the app does not cancel your subscription.'],
-            outro:
-              'If a free trial is offered, unused portions are forfeited upon purchase. RyzaFit may change pricing or plans within App Store policies. All refunds are handled by Apple; RyzaFit does not issue refunds directly.'
-          },
-          {
-            heading: 'User Accounts & Data',
-            paragraphs: [
-              'A RyzaFit account is required for certain features. You are responsible for keeping credentials secure and for all activity under your account.',
-              'Provide accurate, current information when creating or updating your account; RyzaFit is not responsible for losses from unauthorized access.',
-              'RyzaFit collects workout data, preferences, and account info to deliver syncing, analytics, and personalization. Data practices are detailed in the Privacy Policy.',
-              'Data may be stored locally and/or synced securely across devices. While RyzaFit takes reasonable measures to protect data, no system is completely secure.',
-              'Workout data, analytics, and recommendations are provided “as is” and may contain errors or delays; uninterrupted access is not guaranteed.',
-              'RyzaFit may suspend or terminate accounts that violate the Terms or misuse the app. You can stop using RyzaFit anytime. Account deletion and data removal options are described in-app or within the Privacy Policy.'
-            ]
-          }
-        ]
+        question: legalDocuments.terms.title,
+        intro: legalDocuments.terms.summary,
+        sections: legalDocuments.terms.sections,
+        quickNavRoute: legalDocuments.terms.route,
+        outro: legalDocuments.terms.contactNote
       },
       {
-        question: 'Where can I find RyzaFit’s Privacy Policy?',
-        answer:
-          'Open Settings → Legal → Privacy Policy or visit ryzafit.com/legal/privacy to learn how your data is collected and protected.'
+        question: legalDocuments.privacy.title,
+        intro: legalDocuments.privacy.summary,
+        sections: legalDocuments.privacy.sections,
+        quickNavRoute: legalDocuments.privacy.route,
+        outro: legalDocuments.privacy.contactNote
+      },
+      {
+        question: legalDocuments.eula.title,
+        intro: legalDocuments.eula.summary,
+        sections: legalDocuments.eula.sections,
+        quickNavRoute: legalDocuments.eula.route,
+        outro: legalDocuments.eula.contactNote
       }
     ]
   },
